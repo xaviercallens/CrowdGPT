@@ -140,3 +140,13 @@ The module stays **opt-in and unwired**.
 2. Try LoRA **r512**, where the paper reports its LoRA gain. It needs a ~24 GB GPU (community volunteer).
 3. Otherwise, spend the effort on the **data mix**. The gap to Qwen3-0.6B is 1.8 nat on wikitext, against 0.45 on
    CrowdGPT's own chunks.
+
+## 6. Full report and paper
+
+- **Paper (8 pages):** "LLM-JEPA on a Crowd-Trained 0.66B Base Model: A Pre-Registered Study on a Shared Tesla T4",
+  https://github.com/xaviercallens/HiveMind/blob/crowdgpt/llm-jepa-study-t4/paper/crowdgpt_llm_jepa/crowdgpt_llm_jepa.pdf
+- **All results, with every number:**
+  https://github.com/xaviercallens/HiveMind/blob/crowdgpt/llm-jepa-study-t4/docs/CROWDGPT_LLM_JEPA_RESULTS.md
+- **Still open: is the null result specific to Crowd-v1?** The paper's own LoRA table shows +11.4 points at r64, with an
+  Instruct model, lr 2e-5 and k = 1. A test with the paper's exact recipe on Qwen3-0.6B and Crowd-v1 is ready; it will run
+  when the HiveMind T4 is free.
